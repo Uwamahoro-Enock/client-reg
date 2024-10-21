@@ -14,3 +14,4 @@ import { UserModule, UserSchema } from '../src/models/user.model';
   providers: [UserService],
 })
 export class AppModule {}
+
