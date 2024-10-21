@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package user;
+
+// The gRPC service for creating users
+service UserService {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+}
+
+// Message for the request when creating a user
+message CreateUserRequest {
+  string username = 1;
+  string password = 2;
+  int32 age = 3;
+}
+
+// Message for the response after creating a user
+message CreateUserResponse {
+  string id = 1;
+  string message = 2;
+}
